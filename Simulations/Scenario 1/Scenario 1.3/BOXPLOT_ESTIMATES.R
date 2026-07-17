@@ -8,10 +8,10 @@ setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 getwd()
 
 
-data40 <- read.table("Estimates_Scenario_1_3_n40.txt", h=T)
-data80 <- read.table("Estimates_Scenario_1_3_n80.txt", h=T)
-data160 <- read.table("Estimates_Scenario_1_3_n160.txt", h=T)
-data320 <- read.table("Estimates_Scenario_1_3_n320.txt", h=T)
+data40 <- read.table("Estimates_Scenario_1_1_n40.txt", h=T)
+data80 <- read.table("Estimates_Scenario_1_1_n80.txt", h=T)
+data160 <- read.table("Estimates_Scenario_1_1_n160.txt", h=T)
+data320 <- read.table("Estimates_Scenario_1_1_n320.txt", h=T)
 
 #################################################################################
 #----------------------------------MLE estimates--------------------------------#
@@ -56,7 +56,7 @@ lambda1 <- c(MLE_lambda1_n40, MLE_lambda1_n80, MLE_lambda1_n160, MLE_lambda1_n32
 
 
 #-------------------------MLE estimates of beta1---------------------------#
-png(filename = str_c("boxplot_beta_1", "_scenario_",str_sub(getwd(), -3, -1), ".png"))
+png(filename = str_c("boxplot_beta_1", "_scenario_",str_sub(getwd(), -4, -1), ".png"))
 boxplot(MLE_beta1_n40,
         MLE_beta1_n80,
         MLE_beta1_n160,
@@ -73,7 +73,7 @@ dev.off()
 
 
 #-------------------------MLE estimates of beta2--------------------#
-png(filename = str_c("boxplot_beta_2", "_scenario_",str_sub(getwd(), -3, -1), ".png"))
+png(filename = str_c("boxplot_beta_2", "_scenario_",str_sub(getwd(), -4, -1), ".png"))
 boxplot(MLE_beta2_n40,
         MLE_beta2_n80,
         MLE_beta2_n160,
@@ -89,7 +89,7 @@ dev.off()
 
 
 #----------------------------MLE estimates of gamma1---------------------------#
-png(filename = str_c("boxplot_gama_1", "_scenario_",str_sub(getwd(), -3, -1), ".png"))
+png(filename = str_c("boxplot_gama_1", "_scenario_",str_sub(getwd(), -4, -1), ".png"))
 boxplot(MLE_gama1_n40,
         MLE_gama1_n80,
         MLE_gama1_n160,
@@ -105,7 +105,7 @@ dev.off()
 
 
 #----------------------------MLE estimates of lambda1---------------------------#
-png(filename = str_c("boxplot_lambda_1", "_scenario_",str_sub(getwd(), -3, -1), ".png"))
+png(filename = str_c("boxplot_lambda_1", "_scenario_",str_sub(getwd(), -4, -1), ".png"))
 boxplot(MLE_lambda1_n40,
         MLE_lambda1_n80,
         MLE_lambda1_n160,
@@ -115,7 +115,7 @@ boxplot(MLE_lambda1_n40,
         ylim=c(min(lambda1),
                max(lambda1)), 
         cex=1.5,cex.lab=2.0,cex.axis=1.5,cex.main=2.0, pch=16, col = NULL)
-abline(h = log(4),lty=2,lwd=2, col = "red")
+abline(h = -log(4),lty=2,lwd=2, col = "red")
 dev.off()
 
 

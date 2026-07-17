@@ -1,0 +1,76 @@
+Perc. Replic. MC = 25 % 
+Perc. Replic. MC = 50 % 
+Perc. Replic. MC = 75 % 
+Perc. Replic. MC = 100 % 
+ ========================================================================================== 
+ TRUE VALUES  
+ Sample size  40 
+ beta1 beta2 gama1  lambda1
+   1.8    -2    -1 1.386294
+ Mu_min Mu_max Mu_median Sigma_min Sigma_max Sigma_median Het_Intensity Nu_min Nu_max Nu_median n_descartados perc_descartados
+  0.835  5.959     2.477     0.368     0.368        0.368             1    0.8    0.8       0.8            44            0.009
+ ========================================================================================== 
+ ====================================== MLE estimates ===================================== 
+            Mean estimates   Mean SE Null level Median estimates Bias estimates RMSE estimates
+MLE_beta1         1.801194 0.1516099     0.0666         1.797148    0.001194124      0.1578858
+MLE_beta2        -1.991136 0.2305089     0.0644        -1.990498    0.008863834      0.2403171
+MLE_gama1        -1.027873 0.1651128     0.0486        -1.025569   -0.027872751      0.1631125
+MLE_lambda1       1.350840 0.7503283     0.0538         1.319671   -0.035454591      0.6607664
+ ========================================================================================== 
+Perc. Replic. MC = 25 % 
+Perc. Replic. MC = 50 % 
+Perc. Replic. MC = 75 % 
+Perc. Replic. MC = 100 % 
+ ========================================================================================== 
+ TRUE VALUES  
+ Sample size  80 
+ beta1 beta2 gama1  lambda1
+   1.8    -2    -1 1.386294
+ Mu_min Mu_max Mu_median Sigma_min Sigma_max Sigma_median Het_Intensity Nu_min Nu_max Nu_median n_descartados perc_descartados
+  0.835  5.959     2.477     0.368     0.368        0.368             1    0.8    0.8       0.8             0                0
+ ========================================================================================== 
+ ====================================== MLE estimates ===================================== 
+            Mean estimates   Mean SE Null level Median estimates Bias estimates RMSE estimates
+MLE_beta1         1.803182 0.1090906     0.0608         1.801552    0.003181757      0.1128286
+MLE_beta2        -1.997313 0.1648548     0.0612        -1.995405    0.002686536      0.1697002
+MLE_gama1        -1.010601 0.1138608     0.0548        -1.007534   -0.010600846      0.1140851
+MLE_lambda1       1.343103 0.4590411     0.0592         1.333878   -0.043191315      0.4484881
+ ========================================================================================== 
+Perc. Replic. MC = 25 % 
+Perc. Replic. MC = 50 % 
+Perc. Replic. MC = 75 % 
+Perc. Replic. MC = 100 % 
+ ========================================================================================== 
+ TRUE VALUES  
+ Sample size  160 
+ beta1 beta2 gama1  lambda1
+   1.8    -2    -1 1.386294
+ Mu_min Mu_max Mu_median Sigma_min Sigma_max Sigma_median Het_Intensity Nu_min Nu_max Nu_median n_descartados perc_descartados
+  0.835  5.959     2.477     0.368     0.368        0.368             1    0.8    0.8       0.8             0                0
+ ========================================================================================== 
+ ====================================== MLE estimates ===================================== 
+            Mean estimates    Mean SE Null level Median estimates Bias estimates RMSE estimates
+MLE_beta1         1.800888 0.07786837     0.0506         1.800155   0.0008881935     0.07840161
+MLE_beta2        -1.996436 0.11708117     0.0524        -1.996266   0.0035643348     0.11782836
+MLE_gama1        -1.007618 0.07952494     0.0552        -1.005650  -0.0076179357     0.08009709
+MLE_lambda1       1.373761 0.31035214     0.0432         1.365197  -0.0125329318     0.30308008
+ ========================================================================================== 
+Perc. Replic. MC = 25 % 
+Perc. Replic. MC = 50 % 
+Perc. Replic. MC = 75 % 
+Perc. Replic. MC = 100 % 
+ ========================================================================================== 
+ TRUE VALUES  
+ Sample size  320 
+ beta1 beta2 gama1  lambda1
+   1.8    -2    -1 1.386294
+ Mu_min Mu_max Mu_median Sigma_min Sigma_max Sigma_median Het_Intensity Nu_min Nu_max Nu_median n_descartados perc_descartados
+  0.835  5.959     2.477     0.368     0.368        0.368             1    0.8    0.8       0.8             2                0
+ ========================================================================================== 
+ ====================================== MLE estimates ===================================== 
+            Mean estimates    Mean SE Null level Median estimates Bias estimates RMSE estimates
+MLE_beta1         1.800158 0.05531651     0.0508         1.799672   0.0001575580     0.05535023
+MLE_beta2        -1.999160 0.08304030     0.0528        -1.999233   0.0008399759     0.08360459
+MLE_gama1        -1.003574 0.05576400     0.0446        -1.002907  -0.0035743748     0.05540330
+MLE_lambda1       1.376941 0.21332278     0.0434         1.374965  -0.0093538119     0.20794189
+ ========================================================================================== 
