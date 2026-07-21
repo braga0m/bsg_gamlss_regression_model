@@ -39,9 +39,9 @@ names_results2 <- c(str_c("SE_Estimates_Scenario_", str_sub(getwd(), -3, -1), "_
 #-------------------------------Global Variables-------------------------------#
 #definindo os valores dos coef. de regressão 
 VN <- c(40, 80, 160, 320) #Sample sizes
-VBETA <- c(1.1, -2.6, 0.7) #true beta values - MU
-VGAMA <- c(-1.2, 1.1, 0.5) #true gamma values - SIGMA
-VLAMBDA <-  c(-1.2, 1.3) #true lambda values - NU
+VBETA <- c(2.7, -3.1) #true beta values - MU
+VGAMA <- c(-1.3) #true gamma values - SIGMA
+VLAMBDA <- c(log(4)) #true lambda values - NU
 VTHETA <- c(VBETA, VGAMA, VLAMBDA) # true theta values
 NREP <- 5000 #number of Monte Carlo replicates - 1000 ou 5000 replicas.
 
@@ -57,18 +57,22 @@ kk3 <- length(VLAMBDA) #nu - kappa
 #necessário 6 coeficientes de regressão
 se1 = 2 ; se2 = 3 #random seed
 set.seed(c(se1,se2), kind="Marsaglia-Multicarry") #To ensure repeatability of the experiment
-x1 <- runif(VN[1], min = 0, max = 1)#variável explicativa
-x2 <- rbinom(VN[1], size = 1, prob = 0.7)#variável explicativa - Bernoulli(0.7)
-X <- matrix(c(rep(1,VN[1]), x1, x2), ncol=3, byrow=F) #regressor matrix for the median submodel
-Z <- matrix(c(rep(1,VN[1]), x1, x2), ncol=3, byrow=F) #regressor matrix for the sigma submodel
-W <- matrix(c(rep(1,VN[1]), x1), ncol=2, byrow=F) #regressor matrix for the nu submodel
+x1 <- runif(VN[1], min = 0, max = 1)#variável explicativa - uniforme U(0,1)
+#x2 <- rbinom(VN[1], size = 1, prob = 0.7)#variável explicativa - Bernoulli(0.7)
+#x2 <- factor(x2)
+#x3 <- rnorm(VN[1], mean = 5, sd = 2)
+#x4 <- rpois(VN[1], lambda = 3)#variável explicativa - Possion(3)
+X <- matrix(c(rep(1,VN[1]), x1), ncol=2, byrow=F) #regressor matrix for the median submodel
+Z <- matrix(c(rep(1,VN[1])), ncol = 1, byrow=F) #regressor matrix for the sigma submodel
+W <- matrix(c(rep(1,VN[1])), ncol=1, byrow=F) #regressor matrix for the nu submodel
 
 
 #--------------------------------begin loop------------------------------------#
 #INÍCIO DO LOOP
 for(l in 1:length(VN)){
   N = VN[l]
-
+  
+  
   #---------Initializing vectors to store the estimates and statistic z--------#
   thetahat <- matrix(NA, NREP, kk1 + kk2 + kk3)
   se_thetahat <- matrix(NA, NREP, kk1 + kk2 + kk3)
@@ -104,12 +108,12 @@ for(l in 1:length(VN)){
       
       #estrutura do modelo
       #alterar a depender do cenário
-      fitMLE <- gamlss(formula = y ~ SampleG$X[,2] + factor(SampleG$X[,3]), 
-                       sigma.formula = ~ SampleG$Z[,2] + factor(SampleG$Z[,3]), 
-                       nu.formula = ~ SampleG$W[,2], 
-                       family = BSG(mu.link = "log", sigma.link = "log", nu.link = "logit"), 
+      fitMLE <- gamlss(formula = y ~ SampleG$X[,2], 
+                       sigma.formula = ~ 1, 
+                       nu.formula = ~ 1, 
+                       family = BSG(), 
                        method = RS(),
-                       nu.start = rep(0.5, length(y)),
+                       #nu.start = rep(0.5, length(y)),
                        trace = FALSE)
       
       #warning of not convergence
