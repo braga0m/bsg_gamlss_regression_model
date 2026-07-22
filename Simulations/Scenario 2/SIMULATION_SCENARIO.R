@@ -22,19 +22,19 @@ source("SAMPLE.r")
 
 ####nome dos arquivos txt
 #
-sink(str_c("Results_Scenario", str_sub(getwd(), -3, -1), ".txt"))
+sink(str_c("Results_Scenario", str_sub(getwd(), -1, -1), ".txt"))
 
 #
-names_results1 <- c(str_c("Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n40"), 
-                    str_c("Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n80"), 
-                    str_c("Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n160"),
-                    str_c("Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n320"))
+names_results1 <- c(str_c("Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n40"), 
+                    str_c("Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n80"), 
+                    str_c("Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n160"),
+                    str_c("Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n320"))
 
 #
-names_results2 <- c(str_c("SE_Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n40"), 
-                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n80"), 
-                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n160"),
-                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n320"))
+names_results2 <- c(str_c("SE_Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n40"), 
+                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n80"), 
+                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n160"),
+                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n320"))
 
 #-------------------------------Global Variables-------------------------------#
 #definindo os valores dos coef. de regressão 

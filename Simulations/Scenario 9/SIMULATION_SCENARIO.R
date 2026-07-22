@@ -22,25 +22,25 @@ source("SAMPLE.r")
 
 ####nome dos arquivos txt
 #
-sink(str_c("Results_Scenario", str_sub(getwd(), -3, -1), ".txt"))
+sink(str_c("Results_Scenario", str_sub(getwd(), -1, -1), ".txt"))
 
 #
-names_results1 <- c(str_c("Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n40"), 
-                    str_c("Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n80"), 
-                    str_c("Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n160"),
-                    str_c("Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n320"))
+names_results1 <- c(str_c("Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n40"), 
+                    str_c("Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n80"), 
+                    str_c("Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n160"),
+                    str_c("Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n320"))
 
 #
-names_results2 <- c(str_c("SE_Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n40"), 
-                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n80"), 
-                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n160"),
-                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -3, -1), "_n320"))
+names_results2 <- c(str_c("SE_Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n40"), 
+                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n80"), 
+                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n160"),
+                    str_c("SE_Estimates_Scenario_", str_sub(getwd(), -1, -1), "_n320"))
 
 #-------------------------------Global Variables-------------------------------#
 #definindo os valores dos coef. de regressão 
 VN <- c(40, 80, 160, 320) #Sample sizes
-VBETA <- c(1.8, -2, 1) #true beta values - MU
-VGAMA <- c(-1.2, 1.3, 1.4) #true gamma values - SIGMA
+VBETA <- c(1.1, -2.6, 0.7) #true beta values - MU
+VGAMA <- c(-1.2, 1.1, 0.5) #true gamma values - SIGMA
 VLAMBDA <-  c(-1.2, 1.3) #true lambda values - NU
 VTHETA <- c(VBETA, VGAMA, VLAMBDA) # true theta values
 NREP <- 5000 #number of Monte Carlo replicates - 1000 ou 5000 replicas.
